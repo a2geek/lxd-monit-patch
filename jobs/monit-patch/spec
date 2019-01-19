@@ -1,0 +1,10 @@
+---
+name: monit-patch
+
+templates:
+  pre-start: bin/pre-start
+
+packages:
+- monit-patch
+
+properties: {}

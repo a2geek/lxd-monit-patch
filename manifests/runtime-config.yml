@@ -1,0 +1,10 @@
+releases:
+- name: lxd-monit-patch
+  url: file:///home/rob/Documents/Source/lxd-monit-patch/release.tgz
+  version: 0+dev.3
+
+addons:
+- name: monit-patch
+  jobs:
+  - name: monit-patch
+    release: lxd-monit-patch

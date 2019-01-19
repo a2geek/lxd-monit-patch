@@ -1,0 +1,8 @@
+---
+name: monit-patch
+
+dependencies: []
+
+files:
+- monit-5.2.5.tar.gz
+- sysdep_LINUX.c

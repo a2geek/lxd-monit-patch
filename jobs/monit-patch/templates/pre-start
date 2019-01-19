@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Replace with our patched version
+mv /var/vcap/bosh/bin/monit /var/vcap/bosh/bin/monit-orig
+cp /var/vcap/packages/monit-patch/bin/monit /var/vcap/bosh/bin/monit
+
+# Restart monit - assuming the binary gets reloaded after the kill signal terminates the process.
+sv restart monit

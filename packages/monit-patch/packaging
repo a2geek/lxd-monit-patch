@@ -1,0 +1,21 @@
+set -ex
+
+tar xzf monit-5.2.5.tar.gz
+
+# Apply patch
+cp sysdep_LINUX.c monit-5.2.5/process/sysdep_LINUX.c
+
+# Target directories
+mkdir -p ${BOSH_INSTALL_TARGET}/{bin,src}
+
+pushd monit-5.2.5
+  # Copy while src is clean
+  cp -r ./ ${BOSH_INSTALL_TARGET}/src
+
+  # Build
+  ./configure --prefix=/var/vcap/bosh --without-ssl
+  make -j4
+
+  # Copy executable
+  cp ./monit ${BOSH_INSTALL_TARGET}/bin/monit
+popd
