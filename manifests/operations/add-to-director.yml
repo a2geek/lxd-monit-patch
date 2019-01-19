@@ -1,0 +1,16 @@
+# Include the monit patch for the BOSH director itself.
+# Probably only useful if you care about see uptime while developing.
+---
+- type: replace
+  path: /releases/-
+  value:
+    name: lxd-monit-patch
+    url: https://github.com/a2geek/lxd-monit-patch/releases/download/v1/release-5.2.5p1.tgz
+    version: 5.2.5p1
+    sha1: 8e8fec9492ac91503302d4dd83bf9130b723e4c3
+
+- type: replace
+  path: /instance_groups/name=bosh/jobs/-
+  value: &monit_patch
+    name: monit-patch
+    release: lxd-monit-patch
