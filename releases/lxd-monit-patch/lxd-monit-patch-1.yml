@@ -1,0 +1,15 @@
+name: lxd-monit-patch
+version: "1"
+commit_hash: f7dea8c
+uncommitted_changes: false
+jobs:
+- name: monit-patch
+  version: 49bcebe7e1323b5a5db9ae8c8a137b9beeaae00f
+  fingerprint: 49bcebe7e1323b5a5db9ae8c8a137b9beeaae00f
+  sha1: 35622094bc1ed4dec26734a9e141b92c4f0c46ff
+packages:
+- name: monit-patch
+  version: 36ee665c853e306ef9fbf77b8ce286ed9329366a
+  fingerprint: 36ee665c853e306ef9fbf77b8ce286ed9329366a
+  sha1: ef7a97882fa6f6e23a33af0b856fd5be4c7f4c14
+  dependencies: []
