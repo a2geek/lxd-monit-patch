@@ -1,7 +1,8 @@
 releases:
 - name: lxd-monit-patch
-  url: file:///home/rob/Documents/Source/lxd-monit-patch/release.tgz
-  version: 0+dev.3
+  url: https://github.com/a2geek/lxd-monit-patch/releases/download/v1/release-5.2.5p1.tgz
+  version: 5.2.5p1
+  sha1: 8e8fec9492ac91503302d4dd83bf9130b723e4c3
 
 addons:
 - name: monit-patch
